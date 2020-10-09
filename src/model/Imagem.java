@@ -1,6 +1,9 @@
 package model;
 
 import java.util.Date;
+
+import model.enums.Estado;
+import model.enums.Municipio;
 import model.enums.Satelite;
 
 public class Imagem {
@@ -8,8 +11,8 @@ public class Imagem {
 	private Date data;
 	//Hora?
 	private Satelite satelite;
-	private String estado; //<-- Enum?
-	private String municipio;
+	private Estado estado;
+	private Municipio municipio;
 	private double latitude;
 	private double longitude;
 	
@@ -17,8 +20,8 @@ public class Imagem {
 	private double precipitacao;
 	private double riscoFogo;
 	
-	public Imagem(Date data, Satelite satelite, String estado, String municipio, double latitude, double longitude,
-			int diasSemChuva, double precipitacao, double riscoFogo) {
+	public Imagem(Date data, Satelite satelite, Estado estado, Municipio municipio, double latitude, double longitude,
+				  int diasSemChuva, double precipitacao, double riscoFogo) {
 		this.data = data;
 		this.satelite = satelite;
 		this.estado = estado;
@@ -30,10 +33,10 @@ public class Imagem {
 		this.riscoFogo = riscoFogo;
 	}
 	public Imagem() {}
+	
 	public Date getData() {
 		return data;
 	}
-	
 	public void setData(Date data) {
 		this.data = data;
 	}
@@ -43,16 +46,16 @@ public class Imagem {
 	public void setSatelite(Satelite satelite) {
 		this.satelite = satelite;
 	}
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
-	public String getMunicipio() {
+	public Municipio getMunicipio() {
 		return municipio;
 	}
-	public void setMunicipio(String municipio) {
+	public void setMunicipio(Municipio municipio) {
 		this.municipio = municipio;
 	}
 	public double getLatitude() {

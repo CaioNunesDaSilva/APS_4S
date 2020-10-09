@@ -1,6 +1,6 @@
 package model.enums;
 
-public enum Estados {
+public enum Estado {
 	ACRE, 
 	AMAPA,
 	AMAZONAS,

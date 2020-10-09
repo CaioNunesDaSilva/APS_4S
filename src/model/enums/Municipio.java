@@ -1,6 +1,6 @@
 package model.enums;
 
-public enum Municipios {
+public enum Municipio {
     ABAETETUBA,
     ABEL_FIGUEIREDO,
     ACAILANDIA,
