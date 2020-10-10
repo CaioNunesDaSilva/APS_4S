@@ -11,5 +11,8 @@ public enum Satelite {
 	METOPB,
 	NOAA18D,
 	METOPC,
-	NOAA19D
+	NOAA19D,
+	TERRA_MM,
+	AQUA_MM,
+	NOAA18
 }

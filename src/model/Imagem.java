@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Date;
-
 import model.enums.Estado;
 import model.enums.Municipio;
 import model.enums.Satelite;
