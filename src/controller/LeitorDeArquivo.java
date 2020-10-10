@@ -40,7 +40,7 @@ public abstract class LeitorDeArquivo {
 		return texto;
 	}
 	
-	public static void readImagems() throws FileNotFoundException, ParseException{
+	public static ArrayList<Imagem> readImagems() throws FileNotFoundException, ParseException{
 		ArrayList<Imagem> imagems = new ArrayList<Imagem>();
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -61,7 +61,11 @@ public abstract class LeitorDeArquivo {
 			imagems.add(new Imagem(data, satelite, estado, municipio, latitude, longitude, diasSemChuva, precipitacao, riscoFogo));
 		}
 		
-		LeitorDeArquivo.imagems = imagems;
+		return imagems;
+	}
+	
+	public static void setImagems() throws FileNotFoundException, ParseException{
+		LeitorDeArquivo.imagems  = LeitorDeArquivo.readImagems();
 	}
 	
 	public static ArrayList<Imagem> getImagems(){
