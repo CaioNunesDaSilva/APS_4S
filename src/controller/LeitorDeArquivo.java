@@ -15,10 +15,12 @@ import model.enums.Satelite;
 public abstract class LeitorDeArquivo {
 
 	private static String endereco;
+	private static ArrayList<Imagem> imagems;
 
 	public static String getEndereco() {
 		return LeitorDeArquivo.endereco;
 	}
+	
 	public static void setEndereco(String endereco) {
 		LeitorDeArquivo.endereco = endereco;
 	}
@@ -38,7 +40,7 @@ public abstract class LeitorDeArquivo {
 		return texto;
 	}
 	
-	public static ArrayList<Imagem> getImagems() throws FileNotFoundException, ParseException{
+	public static void readImagems() throws FileNotFoundException, ParseException{
 		ArrayList<Imagem> imagems = new ArrayList<Imagem>();
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -59,6 +61,10 @@ public abstract class LeitorDeArquivo {
 			imagems.add(new Imagem(data, satelite, estado, municipio, latitude, longitude, diasSemChuva, precipitacao, riscoFogo));
 		}
 		
-		return imagems;
+		LeitorDeArquivo.imagems = imagems;
+	}
+	
+	public static ArrayList<Imagem> getImagems(){
+		return LeitorDeArquivo.imagems;
 	}
 }

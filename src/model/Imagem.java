@@ -36,54 +36,71 @@ public class Imagem {
 	public Date getData() {
 		return data;
 	}
+	
 	public void setData(Date data) {
 		this.data = data;
 	}
+	
 	public Satelite getSatelite() {
 		return satelite;
 	}
+	
 	public void setSatelite(Satelite satelite) {
 		this.satelite = satelite;
 	}
+	
 	public Estado getEstado() {
 		return estado;
 	}
+	
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+	
 	public Municipio getMunicipio() {
 		return municipio;
 	}
+	
 	public void setMunicipio(Municipio municipio) {
 		this.municipio = municipio;
 	}
+	
 	public double getLatitude() {
 		return latitude;
 	}
+	
 	public void setLatitude(double latitude) {
 		this.latitude = latitude;
 	}
+	
 	public double getLongitude() {
 		return longitude;
 	}
+	
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
+	
 	public int getDiasSemChuva() {
 		return diasSemChuva;
 	}
+	
 	public void setDiasSemChuva(int diasSemChuva) {
 		this.diasSemChuva = diasSemChuva;
 	}
+	
 	public double getPrecipitacao() {
 		return precipitacao;
 	}
+	
 	public void setPrecipitacao(double precipitacao) {
 		this.precipitacao = precipitacao;
 	}
+	
 	public double getRiscoFogo() {
 		return riscoFogo;
 	}
+	
 	public void setRiscoFogo(double riscoFogo) {
 		this.riscoFogo = riscoFogo;
 	}
