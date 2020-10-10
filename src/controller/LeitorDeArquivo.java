@@ -51,7 +51,7 @@ public abstract class LeitorDeArquivo {
 			Date data = sdf.parse(campos[0]);
 			Satelite satelite = Satelite.valueOf(campos[1].replace("-", ""));
 			Estado estado = Estado.valueOf(campos[2].replace(" ", "_"));
-			Municipio municipio = Municipio.valueOf(campos[3].replace(" ", "_").replace("'", "").replace("-", "_"));
+			Municipio municipio = Municipio.valueOf(campos[3].replace(" ", "_").replace("'", "").replace("-", "_")); //<--
 			int diasSemChuva = Integer.parseInt(campos[4]);
 			double precipitacao = Double.parseDouble(campos[5]);
 			double riscoFogo = Double.parseDouble(campos[6]);
