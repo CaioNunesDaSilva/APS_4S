@@ -15,7 +15,6 @@ import model.enums.Satelite;
 public abstract class LeitorDeArquivo {
 
 	private static String endereco;
-	private static ArrayList<Imagem> imagems;
 
 	public static String getEndereco() {
 		return LeitorDeArquivo.endereco;
@@ -62,13 +61,5 @@ public abstract class LeitorDeArquivo {
 		}
 		
 		return imagems;
-	}
-	
-	public static void setImagems() throws FileNotFoundException, ParseException{
-		LeitorDeArquivo.imagems  = LeitorDeArquivo.readImagems();
-	}
-	
-	public static ArrayList<Imagem> getImagems(){
-		return LeitorDeArquivo.imagems;
 	}
 }
