@@ -1,6 +1,7 @@
 package model.enums;
 
 public enum Municipio {
+	
     ABAETETUBA,
     ABEL_FIGUEIREDO,
     ACAILANDIA,
@@ -518,6 +519,7 @@ public enum Municipio {
     XAPURI,
     XINGUARA,
     ZE_DOCA,
+    
 }
 
 

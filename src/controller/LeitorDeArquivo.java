@@ -39,7 +39,7 @@ public abstract class LeitorDeArquivo {
 		return texto;
 	}
 	
-	public static ArrayList<Imagem> readImagems() throws FileNotFoundException, ParseException{
+	public static ArrayList<Imagem> readImagems() throws FileNotFoundException, ParseException, NullPointerException{
 		ArrayList<Imagem> imagems = new ArrayList<Imagem>();
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -50,7 +50,7 @@ public abstract class LeitorDeArquivo {
 			Date data = sdf.parse(campos[0]);
 			Satelite satelite = Satelite.valueOf(campos[1].replace("-", ""));
 			Estado estado = Estado.valueOf(campos[2].replace(" ", "_"));
-			Municipio municipio = Municipio.valueOf(campos[3].replace(" ", "_").replace("'", "").replace("-", "_")); //<--
+			Municipio municipio = Municipio.valueOf(campos[3].replace(" ", "_").replace("'", "").replace("-", "_")); 
 			int diasSemChuva = Integer.parseInt(campos[4]);
 			double precipitacao = Double.parseDouble(campos[5]);
 			double riscoFogo = Double.parseDouble(campos[6]);
