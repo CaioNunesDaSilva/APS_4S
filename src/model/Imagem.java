@@ -4,17 +4,16 @@ import java.util.Date;
 import model.enums.Estado;
 import model.enums.Municipio;
 import model.enums.Satelite;
+import model.exceptions.NullAttributeException;
 
 public class Imagem {
 	
 	private Date data;
-	//Hora?
 	private Satelite satelite;
 	private Estado estado;
 	private Municipio municipio;
 	private double latitude;
 	private double longitude;
-	
 	private int diasSemChuva;
 	private double precipitacao;
 	private double riscoFogo;
@@ -31,34 +30,37 @@ public class Imagem {
 		this.precipitacao = precipitacao;
 		this.riscoFogo = riscoFogo;
 	}
-	public Imagem() {}
-	
-	public Date getData() {
-		return data;
+
+	public Date getData() throws NullAttributeException{
+		if (data == null) throw new NullAttributeException();
+		else return data;
 	}
 	
 	public void setData(Date data) {
 		this.data = data;
 	}
 	
-	public Satelite getSatelite() {
-		return satelite;
+	public Satelite getSatelite() throws NullAttributeException{
+		if (satelite == null) throw new NullAttributeException();
+		else return satelite;
 	}
 	
 	public void setSatelite(Satelite satelite) {
 		this.satelite = satelite;
 	}
 	
-	public Estado getEstado() {
-		return estado;
+	public Estado getEstado() throws NullAttributeException{
+		if (estado == null) throw new NullAttributeException();
+		else return estado;
 	}
 	
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 	
-	public Municipio getMunicipio() {
-		return municipio;
+	public Municipio getMunicipio() throws NullAttributeException{
+		if (municipio == null) throw new NullAttributeException();
+		else return municipio;
 	}
 	
 	public void setMunicipio(Municipio municipio) {

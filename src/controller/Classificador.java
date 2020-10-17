@@ -3,10 +3,11 @@ package controller;
 import java.util.ArrayList;
 import model.Imagem;
 import model.enums.TipoClassificacao;
+import model.exceptions.NullAttributeException;
 
 public abstract class Classificador {
 
-	public static long sortData(ArrayList<Imagem> imagems, TipoClassificacao tipo) {
+	public static long sortData(ArrayList<Imagem> imagems, TipoClassificacao tipo) throws NullAttributeException {
 		long[] datas = new long[imagems.size()];
 		int x = 0;
 
@@ -36,7 +37,7 @@ public abstract class Classificador {
 		}
 	}
 
-	public static long sortSatelite(ArrayList<Imagem> imagems, TipoClassificacao tipo) {
+	public static long sortSatelite(ArrayList<Imagem> imagems, TipoClassificacao tipo) throws NullAttributeException {
 		int[] satelites = new int[imagems.size()];
 		int x = 0;
 
@@ -66,7 +67,7 @@ public abstract class Classificador {
 		}
 	}
 	
-	public static long sortEstado(ArrayList<Imagem> imagems, TipoClassificacao tipo) {
+	public static long sortEstado(ArrayList<Imagem> imagems, TipoClassificacao tipo) throws NullAttributeException {
 		int[] estados = new int[imagems.size()];
 		int x = 0;
 
@@ -96,7 +97,7 @@ public abstract class Classificador {
 		}
 	}
 	
-	public static long sortMunicipio(ArrayList<Imagem> imagems, TipoClassificacao tipo) {
+	public static long sortMunicipio(ArrayList<Imagem> imagems, TipoClassificacao tipo) throws NullAttributeException {
 		int[] municipios = new int[imagems.size()];
 		int x = 0;
 
@@ -126,7 +127,7 @@ public abstract class Classificador {
 		}
 	}
 	
-	public static long sortLatitude(ArrayList<Imagem> imagems, TipoClassificacao tipo) {
+	public static long sortLatitude(ArrayList<Imagem> imagems, TipoClassificacao tipo)  {
 		double[] latitudes = new double[imagems.size()];
 		int x = 0;
 
