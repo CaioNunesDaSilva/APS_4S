@@ -1,7 +1,7 @@
 # APS_4S-algoritmos_de_ordenacao
 APS ~ 4º Semestre
 
-O grupodeverá realizar um trabalho utilizando algoritmos
+O grupo deverá realizar um trabalho utilizando algoritmos
 considerando o seguinte exemplo: o geoprocessamento de imagens da
 floresta amazônica permite a fiscalização de ações de crimes ambientais. Os
 satélites geram cerca de 100 mil imagens de toda a região a cada 24 horas,
