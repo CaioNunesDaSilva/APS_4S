@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+
 import model.Imagem;
 import model.enums.Estado;
 import model.enums.Municipio;
@@ -22,6 +23,10 @@ public abstract class LeitorDeArquivo {
 	
 	public static void setEndereco(String endereco) {
 		LeitorDeArquivo.endereco = endereco;
+	}
+	
+	public static boolean checkEndereco() {
+		return new File(LeitorDeArquivo.endereco).exists();
 	}
 
 	public static ArrayList<String> readTextFile() throws FileNotFoundException {
