@@ -21,12 +21,11 @@ public abstract class LeitorDeArquivo {
 		return LeitorDeArquivo.endereco;
 	}
 	
-	public static void setEndereco(String endereco) {
-		LeitorDeArquivo.endereco = endereco;
-	}
-	
-	public static boolean checkEndereco() {
-		return new File(LeitorDeArquivo.endereco).exists();
+	public static boolean setEndereco(String endereco) {
+		if(new File(endereco).exists()) { 
+			LeitorDeArquivo.endereco = endereco;
+			return true;
+		} else return false;
 	}
 
 	public static ArrayList<String> readTextFile() throws FileNotFoundException {
