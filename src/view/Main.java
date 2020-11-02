@@ -346,27 +346,27 @@ public class Main extends javax.swing.JFrame {
 				txtInsertion.setText("" + Classificador.sortRiscoFogo(imagems, TipoClassificacao.INSERTION_SORT));
 				txtQuick.setText("" + Classificador.sortRiscoFogo(imagems, TipoClassificacao.QUICK_SORT));
 			} else {
-				JOptionPane.showMessageDialog(this, "Selecione um campo");
+				JOptionPane.showMessageDialog(this, "Selecione um campo", "Nenhum campo selecionado", JOptionPane.ERROR_MESSAGE);
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Verifique e recarregue o arquivo", "Arquivo não encontrado", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		} catch (NullPointerException e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Carregue um arquivo valido", "Arquivo não carregado", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		} catch (ParseException e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Carregue um arquivo valido", "Erro na leitura do formato do arquivo", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		} catch (NullAttributeException e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Reinicie o programa", "Erro de execucao", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		} catch (IllegalArgumentException e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Reinicie o programa", "Erro de execucao", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		} catch (StackOverflowError e) {
-			// TODO tratamento de erro
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, "Mude as configuracoes da sua JVM", "StackOverflow", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
 		}
 	}
 
@@ -384,7 +384,8 @@ public class Main extends javax.swing.JFrame {
 			}
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 				| UnsupportedLookAndFeelException e) {
-			e.printStackTrace(); // TODO tratamento de erro
+			JOptionPane.showMessageDialog(null, "LookAndFeel nao suportados", "Erro de inicializacao", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace(); 
 		}
 
 		java.awt.EventQueue.invokeLater(new Runnable() {
