@@ -185,11 +185,11 @@ public class Main extends javax.swing.JFrame {
 
 		rbData.setText("Data");
 
-		rbSatelite.setText("Sat√©lite");
+		rbSatelite.setText("Satelite");
 
 		rbEstado.setText("Estado");
 
-		rbMunicipio.setText("Munic√≠pio");
+		rbMunicipio.setText("Municipio");
 
 		rbLatitude.setText("Latitude");
 
@@ -197,7 +197,7 @@ public class Main extends javax.swing.JFrame {
 
 		rbChuva.setText("Dias sem chuva");
 
-		rbPreciptacao.setText("Precipta√ß√£o");
+		rbPreciptacao.setText("Preciptacao");
 
 		rbFogo.setText("Risco de fogo");
 
@@ -292,7 +292,7 @@ public class Main extends javax.swing.JFrame {
 		if (LeitorDeArquivo.setEndereco(txtCaminho.getText())) {
 			jTextField1.setText("Arquivo Encontrado");
 		} else {
-			jTextField1.setText("Arquivo n„o Encontrado");
+			jTextField1.setText("Arquivo nao Encontrado");
 		}
 	}
 
@@ -350,10 +350,10 @@ public class Main extends javax.swing.JFrame {
 			}
 
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(this, "Verifique e recarregue o arquivo", "Arquivo n„o encontrado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Verifique e recarregue o arquivo", "Arquivo nao encontrado", JOptionPane.ERROR_MESSAGE);
 			//e.printStackTrace();
 		} catch (NullPointerException e) {
-			JOptionPane.showMessageDialog(this, "Carregue um arquivo valido", "Arquivo n„o carregado", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Carregue um arquivo valido", "Arquivo nao carregado", JOptionPane.ERROR_MESSAGE);
 			//e.printStackTrace();
 		} catch (ParseException e) {
 			JOptionPane.showMessageDialog(this, "Carregue um arquivo valido", "Erro na leitura do formato do arquivo", JOptionPane.ERROR_MESSAGE);
